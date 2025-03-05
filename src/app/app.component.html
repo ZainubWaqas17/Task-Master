@@ -1,0 +1,55 @@
+<!--Navbar Component-->
+<app-navbar></app-navbar>
+
+<section class="container">
+  <!--Header Section-->
+  <section class="header">
+    <h1>Your Tasks</h1>
+    <p>Organize your day, achieve your goals</p>
+  </section>
+  
+  <!--Input Section-->
+  <section class="input-group">
+    <div class="input-wrapper">
+      <!--Displays a Material Icon called assignment-->
+      <span class="material-icons">assignment</span>
+      <!--type = text: Creates a single-line text input field for the user to type in their task-->
+      <!--ngModel: it is a directive from Angular's FormsModule that enables two-way data binding between the input field and a property in the component's TypeScript file.
+Two-way data binding ensures:
+View-to-Model: Changes made in the input field are instantly reflected in the newTodo variable in the component.
+Model-to-View: Updates to the newTodo variable in the component are immediately shown in the input field  -->
+        <!-- (keyup.enter) is an event binding that listens for the "Enter" key press event while typing in the input field.
+When the Enter key is pressed, the addTodo() method is executed)-->
+      <input
+        type="text"
+        [(ngModel)]="newTodo"
+        (keyup.enter)="addTodo()"
+        placeholder="What needs to be done?"
+      />
+    </div>
+    <button (click)="addTodo()">
+      <span class="material-icons">add</span>
+      Add Task
+    </button>
+  </section>
+
+  <!--Todo List Display Section-->
+  <section class="todo-list">
+    <!--Conditional Rendering - empty state message-->
+    <!--*ngIf: It is a structural directive in Angular that conditionally renders an element based on the provided condition-->
+    <div *ngIf="todos.length === 0" class="empty-state">
+      <span class="material-icons">task</span>
+      <p>No tasks yet!</p>
+      <span>Add a new task to get started</span>
+    </div>
+    
+    <!--Dynamic Rendering-->
+    <!--*ngFor: is a  structural directive in Angular used to loop through an array and dynamically render a block of HTML for each item-->
+    <app-todo-item
+      *ngFor="let todo of todos"
+      [todo]="todo"
+      (toggle)="toggleTodo($event)"
+      (delete)="deleteTodo($event)"
+    ></app-todo-item>
+  </section>
+</section>

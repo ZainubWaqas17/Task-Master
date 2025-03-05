@@ -1,0 +1,17 @@
+<div class="todo-item" [class.completed]="todo.completed">
+  <label class="checkbox-wrapper">
+    <input
+      type="checkbox"
+      class="todo-checkbox"
+      [checked]="todo.completed"
+      (change)="handleAction('toggle')"
+    />
+    <span class="checkmark"></span>
+  </label>
+  <span class="todo-text">{{ todo.text }}</span>
+  <div class="todo-actions">
+    <button class="delete-btn" (click)="handleAction('delete')">
+      <span class="material-icons">delete</span>
+    </button>
+  </div>
+</div>
