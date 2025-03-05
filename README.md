@@ -1,7 +1,18 @@
-<<<<<<< HEAD
-# Task-Master
-Task Master is a sleek and efficient to-do list organizer designed to help users manage their daily tasks effortlessly
-=======
+# ✅ Task Master  
+
+**Task Master** is a sleek and efficient to-do list organizer designed to help users manage their daily tasks effortlessly. With a clean UI and real-time updates, staying productive has never been easier.  
+
+## 🚀 Features  
+- 📝 Add, delete, and mark tasks as complete.  
+- 📅 Organize your tasks with a user-friendly interface.  
+- 🔄 Real-time updates with Angular two-way data binding.  
+- 🎨 Responsive design with Bootstrap for a seamless experience.  
+
+## 🛠 Technologies Used  
+- Angular  
+- Bootstrap  
+- TypeScript  
+
 # MyTodoApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
