@@ -8,7 +8,7 @@
 - Real-time updates with Angular two-way data binding.  
 - Responsive design with Bootstrap for a seamless experience.  
 
-## 🛠 Technologies Used  
+## Technologies Used  
 - Angular  
 - Bootstrap  
 - TypeScript  
